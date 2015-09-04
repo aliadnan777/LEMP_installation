@@ -1,6 +1,6 @@
-Install PHP for Processing
+* Install PHP for Processing
 
-sudo apt-get install php5-fpm php5-mysql
+* sudo apt-get install php5-fpm php5-mysql
 Configure the PHP Processor
 sudo vi /etc/php5/fpm/php.ini
 What we are looking for in this file is the parameter that sets cgi.fix_pathinfo. This will be commented out with a semi-colon (;) and set to "1" by default.
