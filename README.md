@@ -11,6 +11,8 @@ Now, we just need to restart our PHP processor by typing:
 sudo service php5-fpm restart
 Step Four — Configure Nginx to Use our PHP Processor
 sudo vi  /etc/nginx/sites-available/default
+
+
 Currently, with the comments removed, the Nginx default server block file looks like this:
 server {
     listen 80 default_server;
@@ -35,7 +37,7 @@ server {
     root /usr/share/nginx/html;
     index index.php index.html index.htm;
 
-    server_name server_domain_name_or_IP;
+    server_name localhost;
 
     location / {
         try_files $uri $uri/ =404;
