@@ -1,20 +1,20 @@
 * Install PHP for Processing
 
 * sudo apt-get install php5-fpm php5-mysql
-Configure the PHP Processor
-sudo vi /etc/php5/fpm/php.ini
-What we are looking for in this file is the parameter that sets cgi.fix_pathinfo. This will be commented out with a semi-colon (;) and set to "1" by default.
-We will change both of these conditions by uncommenting the line and setting it to "0" like this:
-cgi.fix_pathinfo=0
-Save and close the file when you are finished.
-Now, we just need to restart our PHP processor by typing:
-sudo service php5-fpm restart
-Step Four — Configure Nginx to Use our PHP Processor
-sudo vi  /etc/nginx/sites-available/default
+* Configure the PHP Processor
+* sudo vi /etc/php5/fpm/php.ini
+* What we are looking for in this file is the parameter that sets cgi.fix_pathinfo. This will be commented out with   a semi-colon (;) and set to "1" by default.
+* We will change both of these conditions by uncommenting the line and setting it to "0" like this:
+  cgi.fix_pathinfo=0
+* Save and close the file when you are finished.
+* Now, we just need to restart our PHP processor by typing:
+* sudo service php5-fpm restart
+* Step Four — Configure Nginx to Use our PHP Processor
+* sudo vi  /etc/nginx/sites-available/default
 
 
-Currently, with the comments removed, the Nginx default server block file looks like this:
-server {
+* Currently, with the comments removed, the Nginx default server block file looks like this:
+* server {
     listen 80 default_server;
     listen [::]:80 default_server ipv6only=on;
 
