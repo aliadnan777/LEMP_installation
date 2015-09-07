@@ -15,20 +15,20 @@
 
 * Currently, with the comments removed, the Nginx default server block file looks like this:
 * server {
-    listen 80 default_server;
-    listen [::]:80 default_server ipv6only=on;
+   *  listen 80 default_server;
+    * listen [::]:80 default_server ipv6only=on;
 
-    root /usr/share/nginx/html;
-    index index.html index.htm;
+    * root /usr/share/nginx/html;
+    * index index.html index.htm;
 
-    server_name localhost;
+    * server_name localhost;
 
-    location / {
+    * location / {
         try_files $uri $uri/ =404;
     }
 }
-The changes that you need to make are in red in the text below:
-replace above code with below one
+* The changes that you need to make are in red in the text below:
+* replace above code with below one
 
 server {
     listen 80 default_server;
