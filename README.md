@@ -30,7 +30,7 @@
 * The changes that you need to make are in red in the text below:
 * replace above code with below one
 
-*server {
+* server {
   *  listen 80 default_server;
   *  listen [::]:80 default_server ipv6only=on;
 
@@ -47,7 +47,7 @@
     * error_page 500 502 503 504 /50x.html;
     * location = /50x.html {
     *    root /usr/share/nginx/html;
-    *}
+    * }
 
    * location ~ \.php$ {
     *    try_files $uri =404;
@@ -56,8 +56,8 @@
     *    fastcgi_index index.php;
     *    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
     *    include fastcgi_params;
-    *}
-*} 
+    * }
+* } 
 
 
 
