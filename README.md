@@ -1,8 +1,19 @@
 ## LEMP installation on ubuntu 14.04
 
 ### Install NGINX 
+* `sudo apt-get update`
+* `sudo apt-get install nginx`
+*  manage nginx process
+*  `sudo service nginx stop`
+*  `sudo service nginx start`
+*  `sudo service nginx restart`
 
 ### Install MYSQL
+* `$ sudo apt-get purge mysql-client-core-5.5`----first remove current mysql
+* `$ sudo apt-get install mysql-server`
+* `$ sudo apt-get install mysql-client`
+* `$ sudo netstat -tap | grep mysql`---for checking mysql is running or not
+* `$ sudo /etc/init.d/mysql restart`---restarting mysql
 
 ###Install PHP for Processing
 
@@ -38,7 +49,7 @@ server {
     }
 }
 ```
-* The changes that you need to make are in red in the text below:
+* The changes that you need to make are in text below:
 * replace above code with below one
 ```
  server {
